@@ -5,11 +5,11 @@
 
 <div class="search d-flex justify-content-center align-items-center">
   <div class="d-flex justify-content-center align-items-center w-50">
-    <p-dropdown class="dropdown-serch" (onChange)="getProductsWithCategory($event)" [(ngModel)]="category"
+    <p-dropdown class="dropdown-serch" (onChange)="skip=0; getProductsWithCategory($event) " [(ngModel)]="category"
       [options]="categories" optionLabel="" placeholder="Categories"></p-dropdown>
     <input class="input-search" type="text" [(ngModel)]="searchQuery" pInputText placeholder="Keyword" />
     <span class="p-inputgroup-addon">
-      <button type="button" (click)="searchProductWIthQuery()" class="btn"><i class="pi pi-search"
+      <button type="button" (click)="skip=0; searchProductWIthQuery()" class="btn"><i class="pi pi-search"
           style="color: var(--light-gray)"></i>
       </button>
     </span>

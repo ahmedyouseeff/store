@@ -1,5 +1,10 @@
 # Store
 
+Credentials :{
+    username: 'kminchelle',
+    password: '0lelplR',
+}
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.10.
 
 ## Development server

@@ -64,7 +64,7 @@ a {
   border-top: 1px solid #e4e4e4;
 }
 
-.card-product-grid .bottom-wrap a:hover {
+.card-product-grid .bottom-wrap button:hover {
   box-shadow: 0 -1px 10px rgba(13, 12, 34, 0.3);
 }
 

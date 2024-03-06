@@ -1,0 +1,25 @@
+<header class="p-3">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <span href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <img src="../../../assets/logo.svg" class="logo" alt="Logo">
+      </span>
+      <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></div>
+
+      <div class="text-end d-flex justify-content-center align-items-center me-4">
+        <span class="me-2">{{userInfo.username}}</span>
+        <img [src]="userInfo.image" alt="mdo" width="32" height="32" class="rounded-circle object-contain-fit me-2">
+        <span class="position-relative align-self-end">
+          <i class="pi pi-shopping-cart position-relative"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            {{cartProductsCount}}
+          </span>
+        </span>
+      </div>
+      <span class="text-dark">|</span>
+      <button type="button" class="btn ms-2" (click)="logout()">
+        <i class="pi pi-sign-out"></i>
+      </button>
+    </div>
+  </div>
+</header>

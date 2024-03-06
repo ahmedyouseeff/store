@@ -1,0 +1,25 @@
+<div class="cover">
+  <p-progressBar *ngIf="loading" mode="indeterminate" [style]="{ height: '6px' }"></p-progressBar>
+  <img src="../../../assets/technology-panoramic-banner-collage.jpg" alt="banner">
+</div>
+
+<div class="search d-flex justify-content-center align-items-center">
+  <div class="d-flex justify-content-center align-items-center w-50">
+    <p-dropdown class="dropdown-serch" (onChange)="getProductsWithCategory($event)" [(ngModel)]="category"
+      [options]="categories" optionLabel="" placeholder="Categories"></p-dropdown>
+    <input class="input-search" type="text" [(ngModel)]="searchQuery" pInputText placeholder="Keyword" />
+    <span class="p-inputgroup-addon">
+      <button type="button" (click)="searchProductWIthQuery()" class="btn"><i class="pi pi-search"
+          style="color: var(--light-gray)"></i>
+      </button>
+    </span>
+  </div>
+</div>
+
+<div class="w-100 px-3 d-flex justify-content-center align-items-center flex-wrap">
+  <ng-container *ngFor="let product of products">
+    <app-product-card [product]="product"></app-product-card>
+  </ng-container>
+</div>
+
+<p-paginator (onPageChange)="onPageChange($event)" [rows]="limit" [totalRecords]="totalRecords"></p-paginator>

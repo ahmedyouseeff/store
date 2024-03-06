@@ -1,0 +1,39 @@
+<figure class="card me-2 card-product-grid">
+  <a href="#" class="pt-3" data-abc="true">
+    <p-carousel [value]="product.images" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false">
+      <ng-template let-image pTemplate="item">
+        <img [ngSrc]="image" fill [alt]="product.title" loading="lazy" class="shadow-2" />
+      </ng-template>
+    </p-carousel>
+  </a>
+  <figcaption class="info-wrap">
+    <div class="row">
+      <div class="col-md-8 col-xs-8"> <a href="#" class="title" data-abc="true">{{product.title |
+          slice:0:18}}{{product.title.length<18? null:'....' }}</a>
+            <span class="rated">{{product.category}}</span>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <div class="rating text-right"> <span class="rated">Rated {{product.rating}}/5</span><i
+            class="pi pi-star-fill"></i> </div>
+      </div>
+    </div>
+  </figcaption>
+  <div class="bottom-wrap-payment">
+    <figcaption class="info-wrap">
+      <div class="row">
+        <div class="col-md-8 col-xs-8"> <a href="#" class="title" data-abc="true">{{product.price | currency}}</a>
+          <span class="rated">VISA
+            Platinum</span>
+        </div>
+        <div class="col-md-4 col-xs-4 mt-2">
+          <p-tag [value]="getSeverity(product.stock).value" [severity]="getSeverity(product.stock).status"></p-tag>
+        </div>
+      </div>
+    </figcaption>
+  </div>
+  <div class="bottom-wrap d-flex">
+    <button class="btn btn-primary-black float-right"
+      (click)="cartService.cartProductsCount.next(count + 1); cartService.cartCount()"> Add To
+      Cart </button>
+  </div>
+</figure>

@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/dist/css/bootstrap.css";
+@import "node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+@import "node_modules/primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
+
+:root {
+  --primary-black: #0d0c22;
+  --secondary-black: #6b7280;
+  --light-gray: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--light-gray);
+  padding: 0;
+  margin: 0;
+}
+
+.p-inputtext {
+  width: 100%;
+  height: 52px;
+  border: 1px solid var(--secondary-black);
+  padding: 18px 20px;
+  border-radius: 12px;
+  color: var(--primary-black);
+}
+
+.p-password {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.dropdown-serch .p-dropdown-trigger,
+.dropdown-serch .p-inputtext,
+.dropdown-serch .p-dropdown {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.dropdown-serch .p-dropdown {
+  border: 1px solid var(--secondary-black);
+  height: 52px !important;
+}
+
+.input-search {
+  border-radius: 0px !important;
+}
+
+.search .p-inputgroup-addon {
+  background-color: var(--primary-black);
+  padding: 0.4rem !important;
+}
+
+.btn-primary-black {
+  background-color: var(--primary-black);
+  color: var(--light-gray);
+}
+
+.btn-secondary-black {
+  background-color: var(--light-gray);
+  color: var(--primary-black);
+  border: 1px solid var(--primary-black);
+}
+
+.card a .p-carousel-item {
+  height: 250px !important;
+  position: relative !important;
+}
+
+.card a .p-carousel-item img {
+  object-fit: cover !important;
+}
+
+.custom-scrolltop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--primary-black) !important;
+  font-size: 0.5rem !important;
+}
+
+.p-scrolltop .p-scrolltop-icon {
+  font-size: 1rem !important;
+  color: var(--light-gray) !important;
+}

@@ -1,0 +1,35 @@
+<p-toast></p-toast>
+
+<div class="content">
+  <div class="row">
+
+    <div class="col-xl-5 col-xxl-5 col-md-12 col-s-12 pt-5">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="form pt-xl-5 pt-xxl-5 pt-md-2">
+        <div class="logo">
+          <img src="../../../assets/logo.svg" alt="logo" class="mb-5">
+        </div>
+
+        <h2 class="form_title">Log in to your Account</h2>
+        <p class="form__description text-center">Welcome back! Please, enter your information</p>
+
+        <form [formGroup]='loginForm' (ngSubmit)="login()">
+          <label class="form-control__label">Username</label>
+          <input type="text" formControlName="username" class="p-inputtext">
+
+          <label class="form-control__label">Password</label>
+          <div class="mb-3">
+            <p-password [toggleMask]="true" [feedback]="false" formControlName="password"></p-password>
+          </div>
+
+          <button type="submit" class="form__submit mb-3" id="submit">
+            {{loading? 'Loading...': 'Log In'}}
+          </button>
+        </form>
+      </form>
+    </div>
+
+    <div class="col-xl-7 col-xxl-7 col-md-12 col-s-12">
+      <img src="../../../assets/pattern.jpg" alt="cover" class="object-fit-cover cover">
+    </div>
+  </div>
+</div>

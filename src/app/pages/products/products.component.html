@@ -22,4 +22,26 @@
   </ng-container>
 </div>
 
+<!-- Skeleton for handling Products Loading -->
+<div *ngIf="loading" class="d-flex justify-content-center align-items-center flex-wrap">
+  <div *ngFor="let x of [0, 1,2,3,4,6 ,7,8]" class="border-round border-1 surface-border p-4 surface-card">
+    <p-skeleton width="250px" height="300px"></p-skeleton>
+    <div class="mt-3">
+      <p-skeleton width="10rem" styleClass="mb-2"></p-skeleton>
+      <p-skeleton width="5rem" styleClass="mb-2"></p-skeleton>
+      <p-skeleton height=".5rem"></p-skeleton>
+    </div>
+  </div>
+</div>
+
+<!-- Handel if There are no products -->
+<div *ngIf="products.length<0" class="no-products mt-5 d-flex justify-content-center align-items-center">
+  <div class="card bg-black w-50 h-75 d-flex justify-content-center align-items-center">
+    <h3 class="text-white mb-4">
+      No Products Found
+    </h3>
+    <button class="btn bg-light-gray px-4" (click)="getProductsWithLimitation()">Retry</button>
+  </div>
+</div>
+
 <p-paginator (onPageChange)="onPageChange($event)" [rows]="limit" [totalRecords]="totalRecords"></p-paginator>

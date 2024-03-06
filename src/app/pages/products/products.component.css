@@ -7,3 +7,11 @@
 .search {
   margin-top: -26px;
 }
+
+.no-products {
+  height: 300px;
+}
+
+.no-products .card {
+  border-radius: 1.5rem;
+}

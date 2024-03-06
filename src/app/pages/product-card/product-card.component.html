@@ -1,14 +1,20 @@
 <figure class="card me-2 card-product-grid">
-  <a href="#" class="pt-3" data-abc="true">
-    <p-carousel [value]="product.images" [numVisible]="1" [numScroll]="1" [circular]="true" [showIndicators]="false">
+  <a href="#" class="pt-3">
+    <p-carousel *ngIf="product.images.length>1" [value]="product.images" [numVisible]="1" [numScroll]="1"
+      [circular]="true" [showIndicators]="false">
       <ng-template let-image pTemplate="item">
         <img [ngSrc]="image" fill [alt]="product.title" loading="lazy" class="shadow-2" />
       </ng-template>
     </p-carousel>
+
+    <div *ngIf="product.images.length==1" class="product-card-image">
+      <img [ngSrc]="product.images[0]" fill loading="lazy" class="shadow-2" [alt]="product.title" />
+    </div>
+
   </a>
   <figcaption class="info-wrap">
     <div class="row">
-      <div class="col-md-8 col-xs-8"> <a href="#" class="title" data-abc="true">{{product.title |
+      <div class="col-md-8 col-xs-8"> <a href="#" class="title">{{product.title |
           slice:0:18}}{{product.title.length<18? null:'....' }}</a>
             <span class="rated">{{product.category}}</span>
       </div>
@@ -21,7 +27,7 @@
   <div class="bottom-wrap-payment">
     <figcaption class="info-wrap">
       <div class="row">
-        <div class="col-md-8 col-xs-8"> <a href="#" class="title" data-abc="true">{{product.price | currency}}</a>
+        <div class="col-md-8 col-xs-8"> <a href="#" class="title">{{product.price | currency}}</a>
           <span class="rated">VISA
             Platinum</span>
         </div>

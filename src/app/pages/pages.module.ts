@@ -16,6 +16,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { TagModule } from 'primeng/tag';
+import { SkeletonModule } from 'primeng/skeleton';
 
 @NgModule({
   declarations: [ProductsComponent, ProductCardComponent],
@@ -33,6 +34,7 @@ import { TagModule } from 'primeng/tag';
     ProgressBarModule,
     ToastModule,
     TagModule,
+    SkeletonModule,
   ],
 })
 export class PagesModule {}
